@@ -1,0 +1,44 @@
+{
+  "welcomeTitle": "Bienvenue",
+  "welcomeSubtitle": "Profitez de vos achats dans notre application!",
+  "home": "Accueil",
+  "cart": "Panier",
+  "search": "Recherche",
+  "profile": "Profil",
+  "categories": "Categories",
+  "settings": "Paramétres",
+  "generalSettings": "Generale",
+  "appearance": "Apparence",
+  "language": "Langue",
+  "system": "Systeme",
+  "light": "Clair",
+  "dark": "Sombre",
+  "signOut": "Se déconnecter",
+  "priceOf": "{price} MRU",
+  "@priceOf": {
+    "placeholders": {
+      "price": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "addToCart": "Ajouter au panier",
+  "authTitle": "Authentifiez-vous avec votre téléphone",
+  "verifyOtpTitle": "Nous avons envoyé un code SMS à votre numéro {number}",
+  "registerTitle": "Presque terminé ! Saisissez les informations de votre profil.",
+  "phoneNumber": "Numéro de téléphone",
+  "fullName": "Nom complet",
+  "gender": "Sexe",
+  "male": "Homme",
+  "female": "Femelle",
+  "termsNote": "En créant un compte, vous acceptez nos conditions d'utilisation et nos politiques de confidentialité.",
+  "continueLabel": "Continuez",
+  "resendOtp": "Renvoyer le code de vérification",
+  "fieldRequired": "Ce champ est obligatoire",
+  "phoneNumberInvalid": "Numéro de téléphone est invalide",
+  "codeSmsInvalid": "Le code SMS saisi est invalide!",
+  "tooManySmsTriesError": "Vous avez essayé d'envoyer plusieurs fois le code SMS, veuillez réessayer plus tard!",
+  "unknownError": "Une erreur inconnue s'est produite, veuillez réessayer plus tard!",
+  "networkError": "Erreur de réseau, veuillez vérifier votre connexion Internet et réessayer!"
+}

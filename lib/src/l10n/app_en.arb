@@ -1,0 +1,53 @@
+{
+  "welcomeTitle": "Welcome",
+  "welcomeSubtitle": "Enjoy shopping in our app!",
+  "home": "Home",
+  "cart": "Cart",
+  "search": "Search",
+  "profile": "Profile",
+  "categories": "Categories",
+  "featuredProducts": "Featured Products",
+  "showMore": "Show more",
+  "settings": "Settings",
+  "generalSettings": "General",
+  "appearance": "Appearance",
+  "language": "Language",
+  "system": "System",
+  "light": "Light",
+  "dark": "Dark",
+  "signOut": "Sign out",
+  "priceOf": "{price} MRU",
+  "@priceOf": {
+    "placeholders": {
+      "price": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "addToCart": "Add to cart",
+  "authTitle": "Authenticate with your phone",
+  "verifyOtpTitle": "We've sent an sms code to your number {number}",
+  "@verifyOtpTitle": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "registerTitle": "Almost done! Enter your profile information.",
+  "phoneNumber": "Phone number",
+  "fullName": "Full name",
+  "gender": "Gender",
+  "male": "Male",
+  "female": "Female",
+  "termsNote": "By creating an account, you agree to our Terms of Use and Privacy Policies.",
+  "continueLabel": "Continue",
+  "resendOtp": "Resend verification code",
+  "fieldRequired": "This field is required",
+  "phoneNumberInvalid": "Phone number invalid",
+  "codeSmsInvalid": "The entered SMS code is invalid!",
+  "tooManySmsTriesError": "You have tried sending SMS code many times, please try again later!",
+  "unknownError": "Unknown error ocurred, please try again later!",
+  "networkError": "Network error, please check your internet connection and try again!"
+}

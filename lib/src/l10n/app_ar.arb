@@ -1,0 +1,46 @@
+{
+  "welcomeTitle": "أهلا بك",
+  "welcomeSubtitle": "استمتع بالتسوق في تطبيقنا!",
+  "home": "الرئيسية",
+  "cart": "السلة",
+  "search": "البحث",
+  "profile": "حسابك",
+  "categories": "الأصناف",
+  "featuredProducts": "منتجات رائجة",
+  "showMore": "رؤية المزيد",
+  "settings": "اللإعدادات",
+  "generalSettings": "عامة",
+  "appearance": "السطوع",
+  "language": "اللغة",
+  "system": "النظام",
+  "light": "فاتح",
+  "dark": "داكن",
+  "signOut": "تسجيل الخروج",
+  "priceOf": "{price} أوقية",
+  "@priceOf": {
+    "placeholders": {
+      "price": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "addToCart": "إضافة إلى السلة",
+  "authTitle": "تسجيل الدخول باستخدام هاتفك",
+  "verifyOtpTitle": "لقد أرسلنا رمز SMS إلى رقمك {number}",
+  "registerTitle": "أكملت تقريبا! أدخل معلومات ملفك الشخصي.",
+  "phoneNumber": "رقم الهاتف",
+  "fullName": "الاسم الكامل",
+  "gender": "الجنس",
+  "male": "ذكر",
+  "female": "أنثى",
+  "termsNote": "من خلال إنشاء حساب ، فإنك توافق على شروط الاستخدام وسياسات الخصوصية الخاصة بنا.",
+  "continueLabel": "متابعة",
+  "resendOtp": "أعادة إرسال رمز التحقق",
+  "fieldRequired": "هذه الخانة مطلوبه",
+  "phoneNumberInvalid": "رقم الهاتف غير صحيح",
+  "codeSmsInvalid": "رمز التحقق غير صحيح!",
+  "tooManySmsTriesError": "لقد حاولت ارسال الرمز مرات عديدة، الرجاء المحاولة لاحقا!",
+  "unknownError": "لقد حدث خلل ما، الرجاء المحاولة لاحقا!",
+  "networkError": "خطأ في الشبكة ، يرجى التحقق من اتصالك بالإنترنت وحاول مرة أخرى!"
+}
