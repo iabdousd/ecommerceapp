@@ -65,4 +65,8 @@ class AppIcon extends StatelessWidget {
 class AppIcons {
   static const logo = AppIcon(path: 'assets/icons/logo.png');
   static const icon = AppIcon(path: 'assets/icons/icon.png', size: 240);
+  static const bankily = AppIcon(path: 'assets/icons/bankily.png');
+  static const masrivi = AppIcon(path: 'assets/icons/masrivi.png');
+  static const cashOnDelivery =
+      AppIcon(path: 'assets/icons/cash_on_delivery.png');
 }

@@ -1,6 +1,5 @@
 import 'package:ecommerceapp/src/auth/controller.dart';
 import 'package:ecommerceapp/src/auth/models.dart';
-import 'package:ecommerceapp/src/auth/views/view.dart';
 import 'package:ecommerceapp/src/configs/icons.dart';
 import 'package:ecommerceapp/src/configs/validators.dart';
 import 'package:ecommerceapp/src/l10n/localization.dart';
@@ -13,8 +12,7 @@ import 'package:provider/provider.dart';
 
 class RegisterView extends StatelessWidget {
   const RegisterView({Key? key}) : super(key: key);
-  static const routeName = '/register';
-  static String buildRouteName() => '${AuthView.routeName}/register';
+  static const routeName = 'register';
 
   @override
   Widget build(BuildContext context) {

@@ -32,6 +32,7 @@ class SettingsController with ChangeNotifier {
   void init() async {
     locale = await service.getLocale();
     brightness = await service.getBrightness();
+    Intl.defaultLocale = locale.languageCode;
   }
 
   Future<void> setBrightness(ThemeBrightness? newBrightness) {

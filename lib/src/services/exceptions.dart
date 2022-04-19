@@ -34,7 +34,7 @@ class ExceptionsHandler {
       errorMessage = AppLocalization.of(context).unknownError;
     }
 
-    Flushbar.showError(context, errorMessage);
+    Flushbar.showError(errorMessage);
     return null;
   }
 }

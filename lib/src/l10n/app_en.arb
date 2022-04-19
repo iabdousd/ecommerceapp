@@ -49,5 +49,44 @@
   "codeSmsInvalid": "The entered SMS code is invalid!",
   "tooManySmsTriesError": "You have tried sending SMS code many times, please try again later!",
   "unknownError": "Unknown error ocurred, please try again later!",
-  "networkError": "Network error, please check your internet connection and try again!"
+  "networkError": "Network error, please check your internet connection and try again!",
+  "myCart": "My cart",
+  "emptyCart": "Your cart is empty :(",
+  "itemsCount": "{count,plural, =0{No items}=1{{count} item}=2{{count} items}few{{count} items}many{{count} items}other{{count} items}}",
+  "@itemsCount": {
+    "description": "Cart items counter",
+    "type": "text",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "total": "Total",
+  "addedToCart": "Product added to cart successfully!",
+  "checkout": "Proceed to checkout",
+  "bankily": "Bankily",
+  "masrivi": "Masrivi",
+  "cashOnDelivery": "Cash on delivery",
+  "selectPaymentMethod": "Select payment method",
+  "bankilyInstructions": "Send {total} MRU to 34042444 in bankily, add your account phone number, and attach please a screenshot of the transaction.",
+  "@bankilyInstructions": {
+    "placeholders": {
+      "total": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "masriviInstructions": "Send {total} MRU to 34042444 in masrivi, add your account phone number, and attach please a screenshot of the transaction.",
+  "@masriviInstructions": {
+    "placeholders": {
+      "total": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "transactionImage": "Transaction Screenshot",
+  "myLocation": "My location",
+  "pickLocation": "Click here to select it automatically",
+  "note": "Note"
 }

@@ -1,6 +1,6 @@
+import 'package:ecommerceapp/src/cart/controller.dart';
 import 'package:ecommerceapp/src/home/models.dart';
 import 'package:ecommerceapp/src/l10n/localization.dart';
-import 'package:ecommerceapp/src/landing/view.dart';
 import 'package:ecommerceapp/src/product/controller.dart';
 import 'package:ecommerceapp/src/settings/controller.dart';
 import 'package:ecommerceapp/src/shared/widgets/button.dart';
@@ -10,9 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class ProductView extends StatelessWidget {
-  static const routeName = '/products/:id';
-  static String buildRouteName(String id) =>
-      '${LandingView.routeName}${routeName.replaceFirst(':id', id)}';
+  static const routeName = 'products/:productId';
 
   final String productId;
   final Product? product;
@@ -47,6 +45,7 @@ class _ProductView extends StatelessWidget {
             height: MediaQuery.of(context).size.width / 1.5,
             width: double.infinity,
             fit: BoxFit.cover,
+            zoomable: false,
           ),
           Padding(
             padding: const EdgeInsets.all(16),
@@ -93,7 +92,7 @@ class _ProductView extends StatelessWidget {
       actions: [
         AppButton(
           label: AppLocalization.of(context).addToCart,
-          onPressed: () {},
+          onPressed: () => context.read<CartController>().add(product),
         ),
       ],
     );

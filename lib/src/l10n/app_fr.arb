@@ -15,14 +15,6 @@
   "dark": "Sombre",
   "signOut": "Se déconnecter",
   "priceOf": "{price} MRU",
-  "@priceOf": {
-    "placeholders": {
-      "price": {
-        "type": "double",
-        "format": "decimalPattern"
-      }
-    }
-  },
   "addToCart": "Ajouter au panier",
   "authTitle": "Authentifiez-vous avec votre téléphone",
   "verifyOtpTitle": "Nous avons envoyé un code SMS à votre numéro {number}",
@@ -40,5 +32,20 @@
   "codeSmsInvalid": "Le code SMS saisi est invalide!",
   "tooManySmsTriesError": "Vous avez essayé d'envoyer plusieurs fois le code SMS, veuillez réessayer plus tard!",
   "unknownError": "Une erreur inconnue s'est produite, veuillez réessayer plus tard!",
-  "networkError": "Erreur de réseau, veuillez vérifier votre connexion Internet et réessayer!"
+  "networkError": "Erreur de réseau, veuillez vérifier votre connexion Internet et réessayer!",
+  "myCart": "Mon panier",
+  "emptyCart": "Votre panier est vide :(",
+  "itemsCount": "{count,plural, =0{No elements}=1{{count} element}=2{{count} elements}few{{count} elements}many{{count} elements}other{{count} elements}}",
+  "total": "Total",
+  "addedToCart": "Produit ajouté au panier avec succès!",
+  "checkout": "Passer à la caisse",
+  "bankily": "Bankily",
+  "masrivi": "Masrivi",
+  "cashOnDelivery": "Paiement à la livraison",
+  "selectPaymentMethod": "Sélectionnez le mode de paiement",
+  "bankilyInstructions": "Envoyez {total} MRU au 34042444 en banque, ajoutez le numéro de téléphone de votre compte et joignez une capture d'écran de la transaction.",
+  "masriviInstructions": "Envoyez {total} MRU au 34042444 à masrivi, ajoutez le numéro de téléphone de votre compte et joignez une capture d'écran de la transaction.",
+  "myLocation": "Ma localisation",
+  "pickLocation": "Cliquez ici pour le sélectionner automatiquement",
+  "transactionImage": "Capture d'écran de la transaction"
 }

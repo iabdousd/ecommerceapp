@@ -1,6 +1,5 @@
 import 'package:ecommerceapp/src/configs/theme.dart';
 import 'package:ecommerceapp/src/home/models.dart';
-import 'package:ecommerceapp/src/landing/view.dart';
 import 'package:ecommerceapp/src/settings/controller.dart';
 import 'package:ecommerceapp/src/shared/widgets/product.dart';
 import 'package:ecommerceapp/src/shared/widgets/scaffold.dart';
@@ -10,9 +9,7 @@ import 'package:provider/provider.dart';
 import 'controller.dart';
 
 class CategoryView extends StatelessWidget {
-  static const routeName = '/category/:id';
-  static String buildRouteName(String id) =>
-      LandingView.routeName + routeName.replaceFirst(':id', id);
+  static const routeName = 'category/:categoryId';
 
   final String categoryId;
   final Category? category;
@@ -46,14 +43,14 @@ class _CategoryView extends StatelessWidget {
           crossAxisSpacing: 16,
           mainAxisSpacing: 16,
         ),
+        shrinkWrap: true,
+        physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) => ProductWidget(
           product: controller.products[index],
-          fromCategory: true,
+          categoryId: controller.category!.id,
         ),
         itemCount: controller.products.length,
         padding: const EdgeInsets.all(kDefaultPadding),
-        physics: const NeverScrollableScrollPhysics(),
-        shrinkWrap: true,
       ),
     );
   }

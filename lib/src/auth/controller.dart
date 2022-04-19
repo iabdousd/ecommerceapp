@@ -5,6 +5,7 @@ import 'package:ecommerceapp/src/auth/service.dart';
 import 'package:ecommerceapp/src/auth/views/register.dart';
 import 'package:ecommerceapp/src/auth/views/verify_otp.dart';
 import 'package:ecommerceapp/src/auth/views/view.dart';
+import 'package:ecommerceapp/src/configs/navigator.dart';
 import 'package:ecommerceapp/src/landing/view.dart';
 import 'package:ecommerceapp/src/services/exceptions.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -61,7 +62,7 @@ class AuthController with ChangeNotifier {
               '+222${(customPhoneNumber ?? authInputModel.phoneNumberController.text).replaceAll('+222', '')}',
           codeSent: (String verificationId, int? forceResendingToken) {
             authInputModel.verificationId = verificationId;
-            context.go(VerifyOtpView.buildRouteName());
+            context.goNamed(VerifyOtpView.routeName);
           },
           verificationCompleted: (credential) async {
             EasyLoading.show();
@@ -127,6 +128,7 @@ class AuthController with ChangeNotifier {
     if (userDoc.exists) {
       _user = UserModel.fromSnap(userDoc);
       _usersCollection.doc(userId).snapshots().listen((snap) {
+        if (!snap.exists) return pushToAuth(AppNavigator.context);
         _user = UserModel.fromSnap(snap);
         notifyListeners();
       });
@@ -139,7 +141,7 @@ class AuthController with ChangeNotifier {
         });
       }
     } else {
-      context.go(RegisterView.buildRouteName());
+      context.goNamed(RegisterView.routeName);
     }
   }
 
@@ -154,7 +156,7 @@ class AuthController with ChangeNotifier {
       final user = UserModel(
         id: userId!,
         name: authInputModel.nameController.text,
-        phoneNumber: authInputModel.phoneNumberController.text,
+        phoneNumber: _auth.currentUser!.phoneNumber!.replaceFirst('+222', ''),
         gender: authInputModel.gender,
       );
 
@@ -164,9 +166,10 @@ class AuthController with ChangeNotifier {
     EasyLoading.dismiss();
   }
 
-  void pushToLanding(BuildContext context) => context.go(LandingView.routeName);
+  void pushToLanding(BuildContext context) =>
+      context.goNamed(LandingView.routeName);
 
-  void pushToAuth(BuildContext context) => context.go(AuthView.routeName);
+  void pushToAuth(BuildContext context) => context.goNamed(AuthView.routeName);
 
   void logout(BuildContext context) async {
     EasyLoading.show();

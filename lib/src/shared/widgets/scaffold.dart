@@ -37,10 +37,9 @@ class AppScaffold extends StatelessWidget {
 
     final padding = EdgeInsets.only(
       top: title != null
-          ? (showAppBar
-                  ? AppBarTheme.of(context).toolbarHeight ?? kToolbarHeight + 12
-                  : 0) +
-              kDefaultPadding
+          ? AppBarTheme.of(context).toolbarHeight! +
+              12 +
+              kDefaultPadding * (addPadding ? 2 : 1)
           : 0,
       bottom: addPadding ? kDefaultPadding : 0,
       left: addPadding ? kDefaultPadding : 0,
@@ -71,13 +70,14 @@ class AppScaffold extends StatelessWidget {
         right: false,
         child: Stack(
           children: [
-            Positioned.fill(
-              child: scrollable
-                  ? SingleChildScrollView(padding: padding, child: body)
-                  : Padding(padding: padding, child: body),
-            ),
             if (loading)
-              const Positioned.fill(child: LoadingWidget(darkBackground: true)),
+              const Positioned.fill(child: LoadingWidget(darkBackground: true))
+            else
+              Positioned.fill(
+                child: scrollable
+                    ? SingleChildScrollView(padding: padding, child: body)
+                    : Padding(padding: padding, child: body),
+              ),
             Positioned(
               bottom: MediaQuery.of(context).padding.bottom + 8,
               left: 0,

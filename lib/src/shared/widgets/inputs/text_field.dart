@@ -59,6 +59,7 @@ class AppTextField extends StatelessWidget {
       padding: margin,
       child: TextFormField(
         key: fieldKey,
+        initialValue: initialValue,
         controller: controller,
         enabled: enabled,
         decoration: InputDecoration(
@@ -85,7 +86,6 @@ class AppTextField extends StatelessWidget {
           filled: true,
           alignLabelWithHint: true,
         ),
-        initialValue: initialValue,
         onChanged: onChanged,
         onFieldSubmitted: onSubmitted,
         onSaved: onSaved,

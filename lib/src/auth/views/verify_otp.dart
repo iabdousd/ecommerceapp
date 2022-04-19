@@ -1,4 +1,3 @@
-import 'package:ecommerceapp/src/auth/views/view.dart';
 import 'package:ecommerceapp/src/configs/icons.dart';
 import 'package:ecommerceapp/src/l10n/localization.dart';
 import 'package:ecommerceapp/src/shared/widgets/button.dart';
@@ -11,9 +10,7 @@ import '../controller.dart';
 
 class VerifyOtpView extends StatelessWidget {
   const VerifyOtpView({Key? key}) : super(key: key);
-
-  static const routeName = '/verify-otp';
-  static String buildRouteName() => '${AuthView.routeName}/verify-otp';
+  static const routeName = 'verify-otp';
 
   @override
   Widget build(BuildContext context) {

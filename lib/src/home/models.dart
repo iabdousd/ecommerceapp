@@ -45,22 +45,22 @@ class Product {
         'name': name.toMap,
         'image': image,
         'price': price,
-        'metadatas': metadatas.map((x) => x.toMap).toList(),
       };
 
-  factory Product.fromDoc(DocumentSnapshot<Map<String, dynamic>> doc) {
-    final data = doc.data()!;
-
+  factory Product.fromMap(Map<String, dynamic> data, [String? id]) {
     return Product(
-      id: doc.id,
+      id: id ?? data['id'],
       name: IntlField.fromMap(data['name']),
       image: data['image'],
       price: data['price'].toDouble(),
       metadatas: List<ProductMetaData>.from(
-        data['metadatas']?.map((x) => ProductMetaData.fromMap(x)) ?? [],
+        data['metadatas'].map((x) => ProductMetaData.fromMap(x)),
       ),
     );
   }
+
+  factory Product.fromDoc(DocumentSnapshot<Map<String, dynamic>> doc) =>
+      Product.fromMap(doc.data()!, doc.id);
 }
 
 class ProductVariation {

@@ -55,10 +55,9 @@ class _AppCustomButton extends StatelessWidget {
               if (prefix != null) prefix,
               Text(
                 label,
-                style: Theme.of(context)
-                    .textTheme
-                    .subtitle2!
-                    .copyWith(color: _textColor),
+                style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                      color: _textColor,
+                    ),
               ),
               if (suffix != null)
                 Padding(padding: const EdgeInsets.only(left: 10), child: suffix)

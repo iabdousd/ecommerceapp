@@ -1,3 +1,4 @@
+import 'package:ecommerceapp/src/configs/navigator.dart';
 import 'package:flutter/material.dart';
 
 enum FlushbarType { info, error, success }
@@ -34,40 +35,40 @@ class Flushbar {
           children: [
             Padding(
               padding: EdgeInsets.only(
-                right: Directionality.of(context) == TextDirection.ltr ? 2 : 0,
-                left: Directionality.of(context) == TextDirection.rtl ? 2 : 0,
+                right: Directionality.of(context) == TextDirection.ltr ? 8 : 0,
+                left: Directionality.of(context) == TextDirection.rtl ? 8 : 0,
               ),
-              child: Icon(type.icon, size: 8, color: type.color),
+              child: Icon(type.icon, size: 20, color: type.color),
             ),
             Expanded(
               child: Text(
                 info,
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyText2
-                    ?.copyWith(color: type.color),
+                style: Theme.of(context).textTheme.subtitle2?.copyWith(
+                      color: type.color,
+                    ),
               ),
             ),
           ],
         ),
-        backgroundColor: Theme.of(context).backgroundColor,
-        duration: const Duration(seconds: 5),
-        margin: const EdgeInsets.all(5),
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        duration: const Duration(seconds: 4),
+        margin: const EdgeInsets.all(16),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(2.5),
+          borderRadius: BorderRadius.circular(4),
         ),
         behavior: SnackBarBehavior.floating,
-        elevation: .5,
+        elevation: 4,
       ),
     );
   }
 
-  static void showInfo(BuildContext context, String info) =>
-      _show(context, info, FlushbarType.info);
+  static BuildContext get context => AppNavigator.router.navigator!.context;
 
-  static void showSuccess(BuildContext context, String info) =>
+  static void showInfo(String info) => _show(context, info, FlushbarType.info);
+
+  static void showSuccess(String info) =>
       _show(context, info, FlushbarType.success);
 
-  static void showError(BuildContext context, String info) =>
+  static void showError(String info) =>
       _show(context, info, FlushbarType.error);
 }

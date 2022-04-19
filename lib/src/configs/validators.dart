@@ -18,4 +18,12 @@ class FormValidators {
         }
         return null;
       };
+
+  static FormFieldValidator<Object> objectRequired(BuildContext context) =>
+      (Object? value) {
+        if (value == null) {
+          return AppLocalization.of(context).fieldRequired;
+        }
+        return null;
+      };
 }

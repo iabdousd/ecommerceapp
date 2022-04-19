@@ -13,6 +13,12 @@ class CategoryService {
     return productsSnap.docs.map(Product.fromDoc).toList();
   }
 
+  Stream<List<Product>> streamProducts(String categoryId) => _firestore
+      .collection('products')
+      .where('categories', arrayContains: categoryId)
+      .snapshots()
+      .map((snap) => snap.docs.map(Product.fromDoc).toList());
+
   Future<Category> getCategory(String categoryId) async {
     final doc = await _firestore.collection('categories').doc(categoryId).get();
     return Category.fromDoc(doc);

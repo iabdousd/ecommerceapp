@@ -1,6 +1,5 @@
 import 'package:ecommerceapp/src/configs/theme.dart';
 import 'package:ecommerceapp/src/l10n/localization.dart';
-import 'package:ecommerceapp/src/landing/view.dart';
 import 'package:ecommerceapp/src/settings/controller.dart';
 import 'package:ecommerceapp/src/settings/models.dart';
 import 'package:ecommerceapp/src/shared/widgets/inputs/dropdown.dart';
@@ -10,8 +9,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
 class SettingsView extends StatelessWidget {
-  static const routeName = '/settings';
-  static String buildRouteName() => LandingView.routeName + '/settings';
+  static const routeName = 'settings';
   const SettingsView({Key? key}) : super(key: key);
 
   @override

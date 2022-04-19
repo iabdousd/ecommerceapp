@@ -69,6 +69,7 @@ class ThemeConfig {
           elevation: 0,
           foregroundColor: displayTextLM,
           systemOverlayStyle: SystemUiOverlayStyle.dark,
+          toolbarHeight: kToolbarHeight,
         ),
         listTileTheme: const ListTileThemeData(iconColor: bodyTextLM),
         textTheme: (locale.languageCode == 'ar'
@@ -82,6 +83,12 @@ class ThemeConfig {
           type: BottomNavigationBarType.fixed,
         ),
         dividerColor: displayTextLM,
+        cardTheme: const CardTheme(
+          color: surfaceLM,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(12)),
+          ),
+        ),
       );
 
   static ThemeData darkTheme(Locale locale) => ThemeData.dark().copyWith(
@@ -105,6 +112,7 @@ class ThemeConfig {
           backgroundColor: Colors.transparent,
           elevation: 0,
           foregroundColor: displayTextDM,
+          toolbarHeight: kToolbarHeight,
         ),
         listTileTheme: const ListTileThemeData(iconColor: bodyTextDM),
         textTheme: (locale.languageCode == 'ar'
@@ -118,14 +126,21 @@ class ThemeConfig {
           type: BottomNavigationBarType.fixed,
         ),
         dividerColor: displayTextDM,
+        cardTheme: const CardTheme(
+          color: surfaceDM,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(12)),
+          ),
+        ),
       );
 }
 
 class DefaultBoxShadow extends BoxShadow {
-  const DefaultBoxShadow()
+  final bool small;
+  const DefaultBoxShadow({this.small = false})
       : super(
-          color: const Color(0x24000000),
-          blurRadius: 16,
+          color: small ? const Color(0x18000000) : const Color(0x24000000),
+          blurRadius: small ? 8 : 16,
           blurStyle: BlurStyle.outer,
         );
 }

@@ -9,12 +9,9 @@ import 'package:provider/provider.dart';
 
 class ProductWidget extends StatelessWidget {
   final Product product;
-  final bool fromCategory;
-  const ProductWidget({
-    Key? key,
-    required this.product,
-    this.fromCategory = false,
-  }) : super(key: key);
+  final String? categoryId;
+  const ProductWidget({Key? key, required this.product, this.categoryId})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +20,9 @@ class ProductWidget extends StatelessWidget {
     );
 
     return GestureDetector(
-      onTap: () => context.go(
-        ProductView.buildRouteName(product.id),
+      onTap: () => context.pushNamed(
+        ProductView.routeName,
+        params: {'productId': product.id},
         extra: product,
       ),
       child: Container(
@@ -53,7 +51,6 @@ class ProductWidget extends StatelessWidget {
                   fit: BoxFit.cover,
                   height: double.infinity,
                   width: double.infinity,
-                  zoomable: false,
                 ),
               ),
             ),

@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:ecommerceapp/src/landing/view.dart';
 import 'package:ecommerceapp/src/shared/widgets/icon_button.dart';
 import 'package:ecommerceapp/src/shared/widgets/loading.dart';
 import 'package:flutter/material.dart';
@@ -22,8 +21,8 @@ class AppImage extends StatelessWidget {
     this.placeholderImage,
     this.width,
     this.height,
-    this.fit,
-    this.zoomable = true,
+    this.fit = BoxFit.cover,
+    this.zoomable = false,
     this.borderRadius = BorderRadius.zero,
   }) : super(key: key);
 
@@ -31,7 +30,7 @@ class AppImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: zoomable
-          ? () => context.go(EnlargedImageScreen.buildRouteName(), extra: uri)
+          ? () => context.pushNamed(EnlargedImageScreen.routeName, extra: uri)
           : null,
       child: Hero(
         tag: uri,
@@ -85,8 +84,7 @@ class AppImage extends StatelessWidget {
 }
 
 class EnlargedImageScreen extends StatefulWidget {
-  static const routeName = '/enlarged-image';
-  static String buildRouteName() => LandingView.routeName + '/enlarged-image';
+  static const routeName = 'enlarged-image';
 
   final String imageUrl;
   const EnlargedImageScreen({Key? key, required this.imageUrl})

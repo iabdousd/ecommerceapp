@@ -23,7 +23,7 @@ class UserModel {
   final String id;
   final String name;
   final String phoneNumber;
-  final String? profilePicture;
+  final String? avatarUrl;
   final UserGender gender;
   final double balance;
   final List<String> fcmTokens;
@@ -32,7 +32,7 @@ class UserModel {
     required this.id,
     required this.name,
     required this.phoneNumber,
-    this.profilePicture,
+    this.avatarUrl,
     required this.gender,
     this.balance = 0.0,
     this.fcmTokens = const [],
@@ -42,7 +42,7 @@ class UserModel {
         'uid': id,
         'fullName': name,
         'phoneNumber': phoneNumber,
-        'profilePicture': profilePicture,
+        'avatarUrl': avatarUrl,
         'sex': gender.asString,
       };
 
@@ -53,7 +53,7 @@ class UserModel {
       id: snapshot.id,
       name: data['fullName'],
       phoneNumber: data['phoneNumber'],
-      profilePicture: data['profilePicture'],
+      avatarUrl: data['avatarUrl'],
       gender: UserGenderExtension.fromString(data['sex']),
       balance: data['balance']?.toDouble() ?? 0.0,
       fcmTokens: List<String>.from(data['fcmTokens'] ?? []),

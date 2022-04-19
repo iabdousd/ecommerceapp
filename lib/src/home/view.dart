@@ -125,8 +125,9 @@ class _CategoryWidget extends StatelessWidget {
     );
 
     return GestureDetector(
-      onTap: () => context.go(
-        CategoryView.buildRouteName(category.id),
+      onTap: () => context.pushNamed(
+        CategoryView.routeName,
+        params: {'categoryId': category.id},
         extra: category,
       ),
       child: Padding(

@@ -1,6 +1,11 @@
 {
+  "ar": [
+    "note"
+  ],
+
   "fr": [
     "featuredProducts",
-    "showMore"
+    "showMore",
+    "note"
   ]
 }

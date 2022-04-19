@@ -1,3 +1,5 @@
+import 'package:ecommerceapp/src/auth/controller.dart';
+import 'package:ecommerceapp/src/cart/controller.dart';
 import 'package:ecommerceapp/src/configs/app.dart';
 import 'package:ecommerceapp/src/configs/navigator.dart';
 import 'package:ecommerceapp/src/home/controller.dart';
@@ -16,10 +18,14 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final settingsController = context.watch<SettingsController>();
+    final userId = context.select<AuthController, String?>(
+      (auth) => auth.userId,
+    );
 
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => HomeController()),
+        ChangeNotifierProvider(create: (_) => CartController(userId)),
       ],
       child: GestureDetector(
         onTap: () => FocusManager.instance.primaryFocus?.unfocus(),

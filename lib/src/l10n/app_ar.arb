@@ -17,14 +17,6 @@
   "dark": "داكن",
   "signOut": "تسجيل الخروج",
   "priceOf": "{price} أوقية",
-  "@priceOf": {
-    "placeholders": {
-      "price": {
-        "type": "double",
-        "format": "decimalPattern"
-      }
-    }
-  },
   "addToCart": "إضافة إلى السلة",
   "authTitle": "تسجيل الدخول باستخدام هاتفك",
   "verifyOtpTitle": "لقد أرسلنا رمز SMS إلى رقمك {number}",
@@ -42,5 +34,20 @@
   "codeSmsInvalid": "رمز التحقق غير صحيح!",
   "tooManySmsTriesError": "لقد حاولت ارسال الرمز مرات عديدة، الرجاء المحاولة لاحقا!",
   "unknownError": "لقد حدث خلل ما، الرجاء المحاولة لاحقا!",
-  "networkError": "خطأ في الشبكة ، يرجى التحقق من اتصالك بالإنترنت وحاول مرة أخرى!"
+  "networkError": "خطأ في الشبكة ، يرجى التحقق من اتصالك بالإنترنت وحاول مرة أخرى!",
+  "myCart": "عربة التسوق الخاصة بي",
+  "emptyCart": "عربة التسوق فارغة :(",
+  "itemsCount": "{count,plural, =0{0 عنصر}=1{{عنصر واحد}=2{عنصران}few{{count} عناصر}many{{count} عناصر}other{{count} عناصر}}",
+  "total": "المجموع",
+  "addedToCart": "تمت إضافة المنتج إلى عربة التسوق بنجاح!",
+  "checkout": "باشر بالدفع",
+  "bankily": "بنكيلي",
+  "masrivi": "مصرفي",
+  "cashOnDelivery": "الدفع عند الاستلام",
+  "selectPaymentMethod": "اختار طريقة الدفع",
+  "bankilyInstructions": "أرسل {total} MRU إلى 34042444 في بنكيلي ، وأضف رقم هاتف حسابك ، وأرفق من فضلك لقطة شاشة للمعاملة.",
+  "masriviInstructions": "أرسل {total} MRU إلى 34042444 في مصرفي ، أضف رقم هاتف حسابك ، وأرفق من فضلك لقطة شاشة للمعاملة.",
+  "myLocation": "موقعي",
+  "pickLocation": "انقر هنا لتحديده تلقائيًا",
+  "transactionImage": "لقطة من المعاملة"
 }
